@@ -1,29 +1,33 @@
 <template>
   <section>
-    <h1>Compre ou venda</h1>
-    <ProdutosBuscar />
-    <ProdutosLista />
+    <h1>👍 Compre ou Venda 👎</h1>
+    <ProdutosBuscar/>
+    <ProdutosLista/>
   </section>
 </template>
 
 <script>
-import ProdutosBuscar from "../components/ProdutosBuscar.vue";
-import ProdutosLista from "../components/ProdutosLista.vue";
+import ProdutosBuscar from "@/components/ProdutosBuscar.vue";
+import ProdutosLista from "@/components/ProdutosLista.vue";
 
 export default {
-  name: "Home",
+  name: "home",
   components: {
     ProdutosBuscar,
-    ProdutosLista,
+    ProdutosLista
   },
+  created() {
+    document.title = "Ranek";
+  }
 };
 </script>
 
 <style scoped>
 h1 {
-  font-size: 2rem;
   color: #87f;
   margin-top: 40px;
+  font-size: 2rem;
   text-align: center;
 }
 </style>
+
